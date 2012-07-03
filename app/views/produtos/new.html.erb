@@ -1,0 +1,34 @@
+<h2>
+		Novo Produto
+</h2>
+
+
+<%= form_for @produto do |f| %>
+
+<% unless @produto.errors.blank? %>
+	<ul>
+		<% @produto.errors.full_messages.each do |erro| %>
+		<li> <%= erro %></li>
+		<% end %>
+	</ul>
+	<% end %>
+
+	<p>
+		Nome: <%= f.text_field :nome %>
+	</p>
+
+	<p>
+		Preco: <%= f.text_field :preco %>
+	</p>
+
+	<p>
+		Descricao:
+		<br/>
+		<%= f.text_area :descricao %>
+	</p>
+
+	<p>
+		<%= f.submit 'Enviar' %>
+	</p>
+
+<% end %>
