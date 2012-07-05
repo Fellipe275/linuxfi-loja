@@ -10,7 +10,20 @@ class Item < ActiveRecord::Base
 
 	attr_accessible :produto_id, :quantidade, :produto
 
-	def incrementar_quantidade(quantidade)
+		def incrementar_quantidade(quantidade)
 		self.quantidade += quantidade.to_i
-end
+		end
+	
+		def nome
+			self.produto.nome
+		end
+
+		def preco_unitario
+			self.produto.preco
+		end
+
+		def preco_total
+			self.preco_unitario * self.quantidade
+		end
+
 end
