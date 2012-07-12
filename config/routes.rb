@@ -6,6 +6,11 @@ resources :itens do
     put :atualizar_todos
   end
 end
+  namespace :admin do
+  resources :categorias
+  resources :produtos
+end
+
 root :to => 'produtos#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

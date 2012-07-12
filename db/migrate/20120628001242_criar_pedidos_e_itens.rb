@@ -18,6 +18,6 @@ class CriarPedidosEItens < ActiveRecord::Migration
 end
   def down
   	drop_table :pedidos
-	drop_table :itens
+	 drop_table :itens
   end
 end
