@@ -22,7 +22,7 @@ test:
 
 production:
   adapter: mysql2
-  database: loja_production
+  database: loja_development
   pool: 5
   timeout: 5000
   username: root

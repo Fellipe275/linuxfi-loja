@@ -10,13 +10,15 @@
 <table class = "table table-bordered table striped ">
 <%= render_head Produto,
 :nome,
-:preco %>
+:preco, 
+:categoria_id %>
 
 
 	<tbody>
 		<% @records.each do |produto| %>
 		<tr>
 			<td> <%= produto.nome %> </td>
+			<td><%= produto.categoria ? produto.categoria.nome : '-' %></td>
 			<td> <%= number_to_currency produto.preco %></td>
 			<td> 
 				<%= link_to 'Editar', 
